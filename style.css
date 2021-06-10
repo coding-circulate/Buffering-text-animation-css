@@ -1,0 +1,41 @@
+body {
+    background: #3e3e3e;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    position: relative;
+    color: #333;
+    font-size: 4em;
+    letter-spacing: 5px;
+    border-bottom: 16px solid #333;
+    line-height: 1.4;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+h1::before {
+    content: "buffering...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #33ff00;
+    border-bottom: 16px solid #33ff00;
+    overflow: hidden;
+    animation: load 2s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
